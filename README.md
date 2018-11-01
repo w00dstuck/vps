@@ -92,6 +92,11 @@ Login to your newly installed node as "root".
 
 <img src="docs/images/masternode_vps/first-ssh-session.png" alt="VPS sizing" class="inline"/>
 
+Install this dependency:
+```
+sudo apt-get install jp2a
+```
+
 Enter this command to copy the Masternode installation script and install a single helix Masternode:
 
 ```
