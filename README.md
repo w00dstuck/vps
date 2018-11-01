@@ -188,12 +188,12 @@ When the script finishes, it will look similar to this:
 
 You only have a few steps remaining to complete your masternode configuration.
 ## Configure masternode configuration files
-Since this installation method supports multiple masternodes, the helix configuration files have a node number added to them (e.g., phore_n1.conf, phore_n2.conf), stored in the /etc/masternodes directory. If you have a single masternode on the VPS, you will only need to edit /etc/masternodes/phore_n1.conf.
+Since this installation method supports multiple masternodes, the helix configuration files have a node number added to them (e.g., helix_n1.conf, helix_n2.conf), stored in the /etc/masternodes directory. If you have a single masternode on the VPS, you will only need to edit /etc/masternodes/helix_n1.conf.
 
-To open phore_n1.conf for editing, enter these commands:
+To open helix_n1.conf for editing, enter these commands:
 ```
 sudo apt-get install nano
-nano /etc/masternodes/phore_n1.conf
+nano /etc/masternodes/helix_n1.conf
 ```
 The next step adds your masternode private key.
 
@@ -204,7 +204,7 @@ After typing the nano command, you will see something similar to this.
 
 <img src="docs/images/masternode_vps/insert-your-masternode-private-key.png" alt="add private key" class="inline"/>
 
-Copy the masternode private key from the text file you saved it in, and replace HERE_GOES_YOUR_MASTERNODE_KEY_FOR_MASTERNODE_phore_1 with that private key (this typically begins with an 8).
+Copy the masternode private key from the text file you saved it in, and replace HERE_GOES_YOUR_MASTERNODE_KEY_FOR_MASTERNODE_helix_1 with that private key (this typically begins with an 8).
 
 While you have this file opened, copy the information that follows after masternodeaddr=, starting with the open bracket. This is the masternode's IPv6 address and port, and will be needed for the wallet's masternode.conf file.
 
@@ -214,11 +214,11 @@ Then press <font color="Green">Y</font> to save, and press Enter to exit.
 Finally, close and restart your helix wallet so that it will have the new masternode configuration.
 
 ## Start your masternodes
-A script for starting all masternodes on the VPS has been created at /usr/local/bin/activate_masternodes_phore.sh.
+A script for starting all masternodes on the VPS has been created at /usr/local/bin/activate_masternodes_helix.sh.
 Run this command after your masternode configuration written above.
 
 ```
-/usr/local/bin/activate_masternodes_phore
+/usr/local/bin/activate_masternodes_helix
 ```
 
 The masternode daemons will start and begin loading the helix blockchain.
@@ -251,7 +251,7 @@ The masternode cannot complete activation until it is fully synced with the heli
 To check the status of your masternode, please enter this command in the VPS terminal. If you have multiple masternodes on the same VPS, you can change n1 to n2 etc. below to check the status of each one.
 
 ```
-/usr/local/bin/helix-cli -conf=/etc/masternodes/phore_n1.conf getinfo
+/usr/local/bin/helix-cli -conf=/etc/masternodes/helix_n1.conf getinfo
 ```
 The output will look like this:
 ```
