@@ -12,7 +12,7 @@ This masternode installation script vastly simplifies the setup of a helix maste
 
 Some notes and requirements:
 
-* Script has only been tested on a Vultr VPS, but should work almost anywhere where IPv6 addresses are available
+* Script has only been tested on a Contabo VPS, but should work almost anywhere where IPv6 addresses are available
 * Currently only Ubunto 16.04 Linux is supported
 * This script needs to run as root or with sudo, the masternodes will and should not!
 
@@ -24,7 +24,7 @@ This project was forked from https://github.com/masternodes/vps. @marsmensch (Fl
 BTC  33ENWZ9RCYBG7nv6ac8KxBUSuQX64Hx3x3
 ```
 
-# Install guide on vultr
+# Install guide on Contabo
 
 ## How to get VPS server
 
