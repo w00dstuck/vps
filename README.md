@@ -28,49 +28,33 @@ BTC  33ENWZ9RCYBG7nv6ac8KxBUSuQX64Hx3x3
 
 ## How to get VPS server
 
-For new masternode owners, **Vultr** is recommended as a VPS hosting provider, but other providers that allow direct root SSH login access and offer Ubunto 16.04 may work.
+For new masternode owners, **[url=https://contabo.com/?show=vps]Contabo[/url]** is recommended as a VPS hosting provider, but other providers that allow direct root SSH login access and offer Ubunto 16.04 may work.
 
-You can use the following referral link to sign up with Vultr for VPS hosting:
+You can use the following  link to sign up with Contabo for VPS hosting:
 
-<a href="https://www.vultr.com/?ref=7316561"><img src="https://www.vultr.com/media/banner_2.png" width="468" height="60"></a>
+https://contabo.com/?show=vps
 
 ## Deploy a new system
 
-First, create a new VPS by clicking that small "+" button.
-
-<img src="docs/images/masternode_vps/deploy-a-new-system.png" alt="VPS creation" class="inline"/>
-
-## Location choice
-
-You can choose any location. You may wish to have it hosted in a city/country near you, or choose a different area to help with the global decentralization of the helix masternode network.
-
-<img src="docs/images/masternode_vps/location-choice.png" alt="VPS location choice" class="inline"/>
-
-## Linux distribution (Ubuntu 16.04 LTS)
-
-Select Ubuntu 16.04.
-
-<img src="docs/images/masternode_vps/linux-distribution--ubuntu-1604-lts-.png" alt="VPS location choice" class="inline"/>
+First, create a new VPS by selecting one of the VPS offers.
 
 ## VPS size
 
-The 25 GB SSD / 1024MBB Memory instance is enough for 2-3 masternodes. You may need more memory as the helix blockchain grows over time, or if you want to run more masternodes.
+The 400 GB SSD / 8GB Memory instance is enough for 10-16 masternodes. You may need more memory as the helix blockchain grows over time, or if you want to run more masternodes.
 
-<img src="docs/images/masternode_vps/vps-size.png" alt="VPS sizing" class="inline"/>
+<img src="https://i.gyazo.com/92545df22ef0eb56f6eaf05fe11fc4d1.png" alt="VPS creation" class="inline"/>
 
-## Activating additional features (IPv6)
 
-Toggle "Enable IPv6" to activate that feature--at Vultr there is no additional cost for this.
+Select Ubuntu 16.04.
 
-<img src="docs/images/masternode_vps/activating-additional-features--ipv6-.png" alt="VPS sizing" class="inline"/>
+<img src="https://i.gyazo.com/000f4449e3bd15fb6a71f564eee571b9.png" alt="VPS distro choice" class="inline"/>
 
-You may wish to enable DDOS Protection to protect your masternodes against a potential denial of service attack, especially if you are running multiple masternodes from one VPS. Vultr charges an additional fee for this.
 
-## Hostnames & number of VPS
+## Select your payment period
 
-Choose how many instances you want and click "Deploy Now".
+Select for how many months you want to rent the VPS. Keep in mind that the longer the renting period is, the more discount you get.
 
-<img src="docs/images/masternode_vps/hostnames--amp--number-of-vps.png" alt="VPS sizing" class="inline"/>
+<img src="https://i.gyazo.com/78894e04fe373ebb3dbe8f2270f6a651.png" alt="VPS prepayment period" class="inline"/>
 
 ## Installation of PuTTY as SSH client (Windows)
 If you are running your wallet from Windows, install PuTTY while the server is being set up. You can download PuTTY from here: http://www.putty.org/. Skip this step if you are using a Mac--you will use the built in Terminal application instead.
