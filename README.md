@@ -28,7 +28,7 @@ BTC  33ENWZ9RCYBG7nv6ac8KxBUSuQX64Hx3x3
 
 ## How to get VPS server
 
-For new masternode owners, **[url=https://contabo.com/?show=vps]Contabo[/url]** is recommended as a VPS hosting provider, but other providers that allow direct root SSH login access and offer Ubunto 16.04 may work.
+For new masternode owners, **Contabo** is recommended as a VPS hosting provider, but other providers that allow direct root SSH login access and offer Ubunto 16.04 may work.
 
 You can use the following  link to sign up with Contabo for VPS hosting:
 
@@ -56,28 +56,29 @@ Select for how many months you want to rent the VPS. Keep in mind that the longe
 
 <img src="https://i.gyazo.com/78894e04fe373ebb3dbe8f2270f6a651.png" alt="VPS prepayment period" class="inline"/>
 
-## Installation of PuTTY as SSH client (Windows)
-If you are running your wallet from Windows, install PuTTY while the server is being set up. You can download PuTTY from here: http://www.putty.org/. Skip this step if you are using a Mac--you will use the built in Terminal application instead.
+## Installation of VNC viewer
+Install VNC viewer while the server is being set up. You can download VNC viewer from here: https://www.realvnc.com/en/connect/download/viewer/.
 
-Once PuTTY is installed, return to the Vultr dashboard to get the login details by clicking on the ... to the right of your server, and select Server Details.
+Once VNC viewer is installed, return to the Contabo login details email to get the login details.
 
-## Accessing your VPS via SSH
+## Accessing your VPS via VNC viewer
 
-Copy your password for SSH access from the server details page.
-<img src="docs/images/masternode_vps/accessing-your-vps-via-ssh.png" alt="check hostname and password" class="inline"/>
+Copy your password VNC access from the email details page.
+<img src="https://i.gyazo.com/d551207f253479da09793d8233bc9cdc.png" alt="check hostname and password" class="inline"/>
 
-Now open PuTTY to add the server.
+Now open VNC viewer to add the server.
 
-<img src="docs/images/masternode_vps/login-to-vps-via-PuTTY.png" alt="login to VPS" class="inline"/>
+<img src="https://i.gyazo.com/5a79bd533aa702d3846e84300c99e992.png" alt="login to VPS" class="inline"/>
 
-Enter the IP address in the Host Name field, and enter the server name you wish to use for this VPS (e.g., MN01) to Saved Sessions. Click save.
+Enter the IP address in the VNC server field, and enter the server name you wish to use for this VPS (e.g., MN01) to Saved Sessions. Click ok.
 
-Click the open button. When the console has opened, click Yes in the PuTTY Security Alert box.
-<img src="docs/images/masternode_vps/PuTTY-Security-Alert.png" alt="Alert from PuTTY" class="inline"/>
+<img src="https://i.gyazo.com/4aa6c5e7dd09cc66b61073d45f4dfe5f.png" alt="login to VPS2" class="inline"/>
 
-Now enter your server login details provided in your Vultr account.
-You cannot Ctrl+V to paste in the console. Either right click the mouse or type shift+insert (sometimes
-on keyboard it will just be INS key)
+
+Double click the server icon to start the VNC connection
+
+Now enter your server login details provided in your Contabo email.
+You cannot Ctrl+V to paste in the console.
 
 User: root
 Password: (paste or type password)
@@ -85,11 +86,6 @@ Password: (paste or type password)
 When you paste it will not display, so don't try to paste again.
 Just paste once and press Enter.
 
-For Mac users, open Terminal (e.g., Press Command-Space and type Terminal and press Enter). Then type:
-
-```
-ssh -l root <IP address>
-```
 ## Install Masternode
 
 Login to your newly installed node as "root".
@@ -98,34 +94,30 @@ Login to your newly installed node as "root".
 
 Enter this command to copy the Masternode installation script and install a single helix Masternode:
 
-```bash
+```
 git clone https://github.com/ProjectHelixCoin/vps.git && cd vps && ./install.sh -p helix
 ```
 
 If you have your masternode private key, please use this (you can generate masternode private key with Step 2 below).
 
-```bash
+```
 git clone https://github.com/ProjectHelixCoin/vps.git && cd vps && ./install.sh -p helix -k **PRIVATE KEY**
 ```
 Using this command, you can skip "Configure masternode configuration files" below, because the command abopve adds the masternode private key to the masternode configuration files.
 
-This prepares the system and installs the helix Masternode daemon. This includes downloading the latest helix masternode release, creating a swap file, configuring the firewall, and compiling the helix Masternode from source code. This process takes about 10-15 minutes.
-
-<img src="docs/images/masternode_vps/install-the-desired-masternode-and-amount.png" alt="VPS configuration" class="inline"/>
-
-While that is underway, go back to your local desktop and open helix-qt.
+This prepares the system and installs the helix Masternode daemon. This includes downloading the latest helix masternode release, creating a swap file, configuring the firewall, and compiling the helix Masternode from source code. This process takes about 15-20 minutes.
 
 ### More complex situations (ignore if you are installing a single masternode on a new VPS)
 
 If you wish to install more than one masternode on the same VPS, you can add a -c parameter to tell the script how many to configure, so for example this would install three helix masternodes (all entered on one line):
 
-```bash
+```
 git clone https://github.com/ProjectHelixCoin/vps.git && cd vps && ./install.sh -p helix -c 3
 ```
 
 If you already have your masternode private keys, you can add them as shown below (all entered on one line):
 
-```bash
+```
 git clone https://github.com/ProjectHelixCoin/vps.git && cd vps && ./install.sh -p helix -c 3 --key **PRIVATE KEY 01** --key2 **PRIVATE KEY 02** --key3 **PRIVATE KEY 03**
 ```
 Using this command, you can skip the step for "Configure masternode configuration files", because the command above adds the masternode private keys to the masternode configuration files.
@@ -133,14 +125,16 @@ Using this command, you can skip the step for "Configure masternode configuratio
 
 If you are upgrading your masternode(s) to a new release, you should first remove the old version of the VPS script so that the new one you download is tagged with the latest version, and then you add a -u parameter to upgrade existing nodes:
 
-```bash
+```
 rm -rf /root/
 ```
-```bash
+```
 git clone https://github.com/ProjectHelixCoin/vps.git && cd vps && ./install.sh -p helix -u
 ```
 
 The project is configured to use the latest official release of the helix masternode code, and we will update this project each time a new release is issued, but without downloading the latest version of this project and using the -u parameter, the script will not update an existing helix node that is already installed.
+
+While that is underway, go back to your local desktop and open helix-qt.
 
 ## Configure helix Wallet
 ### Step1 - Create Collateral Transaction
@@ -148,16 +142,16 @@ Once the wallet is open on your local computer, generate a new receive address a
 
 Click the Request payment button, and copy the address.
 
-<img src="docs/images/masternode_vps/step1-newaddress.png" alt="making new address" class="inline"/>
+<img src="https://i.gyazo.com/4b2f8ff12e54fa57026d3eecad02aeb3.png" alt="making new address" class="inline"/>
 
-Now go to the Send tab, paste the copied address, and send *exactly* 10,000 PHR to it in a single transaction. Wait for it to confirm on the blockchain. This is the collateral transaction that will be locked and paired with your new masternode. If you are setting up more than one masternode at one time, repeat this process for each one.
+Now go to the Send tab, paste the copied address, and send *exactly* 10,000 HLIX to it in a single transaction. Wait for it to confirm on the blockchain. This is the collateral transaction that will be locked and paired with your new masternode. If you are setting up more than one masternode at one time, repeat this process for each one.
 
-<img src="docs/images/masternode_vps/step1-send10kphr.png" alt="sending 10kPHR" class="inline"/>
+<img src="https://i.gyazo.com/03d8a2076a1081f51ded60db9f46bb1e.png" alt="sending 10k HLIX" class="inline"/>
 
 ### Step 2 - Generate Masternode Private Key
 Go to the **[Tools > Debug Console]** and enter these commands below:
 
-```bash
+```
 masternode genkey
 ```
 This will produce a masternode private key:
@@ -172,7 +166,7 @@ If you are setting up multiple masternodes, repeat this step for each one. Each 
 
 This will give you the rest of the information you need to configure your masternode in your helix wallet--the transaction ID and the output index.
 
-```bash
+```
 masternode outputs
 ```
 
@@ -180,7 +174,7 @@ masternode outputs
 
 The long string of characters is the *Transaction ID* for your masternode collateral transaction. The number after the long string is the *Index*. Copy and paste these into the text file next to the private key you generated in Step 2.
 
-If you have multiple masternodes in the same wallet and have done the 10,000 PHR transactions for each of them, masternode outputs will display transaction IDs and indexes for each one. You can choose which private key to go with each transaction ID and index, as long as they are all different, and you make sure the corresponding lines in masternode.conf and the VPS helix configuration files match (see below).
+If you have multiple masternodes in the same wallet and have done the 10,000 HLIX transactions for each of them, masternode outputs will display transaction IDs and indexes for each one. You can choose which private key to go with each transaction ID and index, as long as they are all different, and you make sure the corresponding lines in masternode.conf and the VPS helix configuration files match (see below).
 
 ## End of installations
 When the script finishes, it will look similar to this:
@@ -192,7 +186,7 @@ You only have a few steps remaining to complete your masternode configuration.
 Since this installation method supports multiple masternodes, the helix configuration files have a node number added to them (e.g., phore_n1.conf, phore_n2.conf), stored in the /etc/masternodes directory. If you have a single masternode on the VPS, you will only need to edit /etc/masternodes/phore_n1.conf.
 
 To open phore_n1.conf for editing, enter these commands:
-```bash
+```
 sudo apt-get install nano
 nano /etc/masternodes/phore_n1.conf
 ```
@@ -218,7 +212,7 @@ Finally, close and restart your helix wallet so that it will have the new master
 A script for starting all masternodes on the VPS has been created at /usr/local/bin/activate_masternodes_phore.sh.
 Run this command after your masternode configuration written above.
 
-```bash
+```
 /usr/local/bin/activate_masternodes_phore
 ```
 
@@ -251,7 +245,7 @@ The masternode cannot complete activation until it is fully synced with the heli
 
 To check the status of your masternode, please enter this command in the VPS terminal. If you have multiple masternodes on the same VPS, you can change n1 to n2 etc. below to check the status of each one.
 
-```bash
+```
 /usr/local/bin/helix-cli -conf=/etc/masternodes/phore_n1.conf getinfo
 ```
 The output will look like this:
@@ -269,7 +263,7 @@ The output will look like this:
   "difficulty": 42882.54964804553,
   "testnet": false,
   "moneysupply" : 11814171.53907114,
-  "zPHRsupply" : {
+  "zHLIXsupply" : {
       "1" : 263.00000000,
       "5" : 135.00000000,
       "10" : 500.00000000,
@@ -303,7 +297,7 @@ Go to the debug console of your helix wallet **[Tools->Debug Console]** and ente
 startmasternode alias false mn-alias
 ```
 
-You may need to unlock the wallet **[Settings->Unlock Wallet]** before you run this command, entering your passphrase. You can lock the wallet after it is finished.
+You may need to unlock the wallet **[Settings->Unlock Wallet]** before you run this command, entering your passHLIXase. You can lock the wallet after it is finished.
 
 If everything was setup correctly, after entering the command you will see something like this:
 ```
@@ -316,13 +310,13 @@ If everything was setup correctly, after entering the command you will see somet
 }
 ```
 If you are setting up multiple masternodes, repeat this for each one. You can now close the debug console, return the Masternodes tab and check the status:
-<img src="docs/images/masternode_vps/check-masternode-status.png" alt="checking syncing status" class="inline"/>
+<img src="https://i.gyazo.com/8990e1df088dac75ebbb9dd7b9092cf1.png" alt="checking syncing status" class="inline"/>
 
 It should say ENABLED, and within an hour, the timer in the Active column should start increasing.
 
 Your helix masternode is now set up and running! Depending on how many masternodes there are, it may take 12-24 hours before you see your first masternode reward--this is normal and rewards should come at more regular intervals after the first one.
 
-<img src="docs/images/masternode_vps/rewards.png" alt="rewards" class="inline"/>
+<img src="https://i.gyazo.com/41c16f834411757cbc7d651fd41e1817.png" alt="rewards" class="inline"/>
 
 ## Issues and Questions
 Please open a GitHub Issue if there are problems with this installation method. Many helix team members activel support people installing masternodes and can provide assistance in the helix Discord channel.
