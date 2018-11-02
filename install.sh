@@ -746,7 +746,7 @@ generate=0;
 startnodes=0;
 
 # Execute getopt
-ARGS=$(getopt -o "hp:n:c:r:wsudxgk:k2:k3:k4:k5:k6:k7:k8:k9:k10:" -l "help,project:,net:,count:,release:,wipe,sentinel,update,debug,startnodes,generate,key:,key2:,key3:,key4:,key5:,key6:,key7:,key8:,key9:,key10:" -n "install.sh" -- "$@");
+ARGS=$(getopt -o "hp:n:c:r:wsudxgk:k2:k3:k4:k5:k6:k7:k8:k9:k10:k11:k12:k13:k14:k15:k16:17:k18:k19:k20:k21:k22:k23:k24:k25:k26:k27:k28:k29:k30" -l "help,project:,net:,count:,release:,wipe,sentinel,update,debug,startnodes,generate,key:,key2:,key3:,key4:,key5:,key6:,key7:,key8:,key9:,key10:,key11:,key12:,key13:,key14:,key15:,key16:,key17:,key18:,key19:,key20:,key21:,key22:,key23:,key24:,key25:,key26:,key27:,key28:,key29:,key30:" -n "install.sh" -- "$@");
 
 #Bad arguments
 if [ $? -ne 0 ];
@@ -897,6 +897,166 @@ while true; do
                     if [ -n "$1" ];
                     then
                         PRIVKEY[10]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k11 |--key11)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[11]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k12 |--key12)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[12]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k13 |--key13)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[13]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k14 |--key14)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[14]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k15 |--key15)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[15]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k16 |--key16)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[16]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k17 |--key17)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[17]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k18 |--key18)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[18]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k19 |--key19)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[19]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k20 |--key20)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[20]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k21 |--key21)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[21]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k22 |--key22)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[22]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k23 |--key23)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[23]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k24 |--key24)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[24]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k25 |--key25)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[25]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k26 |--key26)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[26]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k27 |--key27)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[27]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k28 |--key28)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[28]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k29 |--key29)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[29]="$1";
+                        shift;
+                    fi
+            ;;
+				     -k30 |--key30)
+            shift;
+                    if [ -n "$1" ];
+                    then
+                        PRIVKEY[30]="$1";
                         shift;
                     fi
             ;;

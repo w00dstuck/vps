@@ -108,7 +108,7 @@ If you have your masternode private key, please use this (you can generate maste
 ```
 git clone https://github.com/ProjectHelixCoin/vps.git && cd vps && ./install.sh -p helix -k **PRIVATE KEY**
 ```
-Using this command, you can skip "Configure masternode configuration files" below, because the command abopve adds the masternode private key to the masternode configuration files.
+Using this command, you can skip "Configure masternode configuration files" below, because the command above adds the masternode private key to the masternode configuration files.
 
 This prepares the system and installs the helix Masternode daemon. This includes downloading the latest helix masternode release, creating a swap file, configuring the firewall, and compiling the helix Masternode from source code. This process takes about 15-20 minutes.
 
@@ -302,7 +302,7 @@ Go to the debug console of your helix wallet **[Tools->Debug Console]** and ente
 startmasternode alias false mn-alias
 ```
 
-You may need to unlock the wallet **[Settings->Unlock Wallet]** before you run this command, entering your passHLIXase. You can lock the wallet after it is finished.
+You may need to unlock the wallet **[Settings->Unlock Wallet]** before you run this command, entering your passphrase. You can lock the wallet after it is finished.
 
 If everything was setup correctly, after entering the command you will see something like this:
 ```
@@ -324,7 +324,7 @@ Your helix masternode is now set up and running! Depending on how many masternod
 <img src="https://i.gyazo.com/41c16f834411757cbc7d651fd41e1817.png" alt="rewards" class="inline"/>
 
 ## Issues and Questions
-Please open a GitHub Issue if there are problems with this installation method. Many helix team members activel support people installing masternodes and can provide assistance in the helix Discord channel.
+Please open a GitHub Issue if there are problems with this installation method. Many helix team members actively support people installing masternodes and can provide assistance in the helix Discord channel.
 Here is a Discord invitation:
 
 https://discord.gg/sbgdcdv
