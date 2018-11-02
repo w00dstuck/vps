@@ -327,6 +327,6 @@ Your helix masternode is now set up and running! Depending on how many masternod
 Please open a GitHub Issue if there are problems with this installation method. Many helix team members actively support people installing masternodes and can provide assistance in the helix Discord channel.
 Here is a Discord invitation:
 
-https://discord.gg/sbgdcdv
+https://discord.gg/dVgcEka
 
 If you would like to make a donation to helix's ongoing development, you can send helix to the core team at this address: PDjGJMDzvJnvbxxgR1bgPm77fFLxn3KAg8
