@@ -68,11 +68,11 @@ Copy your password VNC access from the email details page.
 
 Now open VNC viewer to add the server.
 
-<img src="https://i.gyazo.com/5a79bd533aa702d3846e84300c99e992.png" alt="login to VPS" class="inline"/>
+<img src="https://i.gyazo.com/918d25f18efb6c199b847546a80953ce.png" alt="login to VPS" class="inline"/>
 
 Enter the IP address in the VNC server field, and enter the server name you wish to use for this VPS (e.g., MN01) to Saved Sessions. Click ok.
 
-<img src="https://i.gyazo.com/4aa6c5e7dd09cc66b61073d45f4dfe5f.png" alt="login to VPS2" class="inline"/>
+<img src="https://i.gyazo.com/d540be2d24f23b56ab299877b2cef459.png" alt="login to VPS2" class="inline"/>
 
 
 Double click the server icon to start the VNC connection
