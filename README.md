@@ -42,19 +42,19 @@ First, create a new VPS by selecting one of the VPS offers.
 
 The 200 GB SSD / 8GB Memory instance is enough for 10-16 masternodes. You may need more memory as the helix blockchain grows over time, or if you want to run more masternodes.
 
-<img src="https://i.gyazo.com/92545df22ef0eb56f6eaf05fe11fc4d1.png" alt="VPS creation" class="inline"/>
+<img src="https://i.gyazo.com/92545df22ef0eb56f6eaf05fe11fc4d1.png" class="inline"/>
 
 
 Select Ubuntu 16.04.
 
-<img src="https://i.gyazo.com/000f4449e3bd15fb6a71f564eee571b9.png" alt="VPS distro choice" class="inline"/>
+<img src="https://i.gyazo.com/000f4449e3bd15fb6a71f564eee571b9.png" class="inline"/>
 
 
 ## Select your payment period
 
 Select for how many months you want to rent the VPS. Keep in mind that the longer the renting period is, the more discount you get.
 
-<img src="https://i.gyazo.com/78894e04fe373ebb3dbe8f2270f6a651.png" alt="VPS prepayment period" class="inline"/>
+<img src="https://i.gyazo.com/78894e04fe373ebb3dbe8f2270f6a651.png" class="inline"/>
 
 ## Installation of VNC viewer
 Install VNC viewer while the server is being set up. You can download VNC viewer from here: https://www.realvnc.com/en/connect/download/viewer/.
@@ -64,15 +64,15 @@ Once VNC viewer is installed, return to the Contabo login details email to get t
 ## Accessing your VPS via VNC viewer
 
 Copy your password VNC access from the email details page.
-<img src="https://i.gyazo.com/d551207f253479da09793d8233bc9cdc.png" alt="check hostname and password" class="inline"/>
+<img src="https://i.gyazo.com/d551207f253479da09793d8233bc9cdc.png" class="inline"/>
 
 Now open VNC viewer to add the server.
 
-<img src="https://i.gyazo.com/918d25f18efb6c199b847546a80953ce.png" alt="login to VPS" class="inline"/>
+<img src="https://i.gyazo.com/918d25f18efb6c199b847546a80953ce.png" class="inline"/>
 
 Enter the IP address in the VNC server field, and enter the server name you wish to use for this VPS (e.g., MN01) to Saved Sessions. Click ok.
 
-<img src="https://i.gyazo.com/d540be2d24f23b56ab299877b2cef459.png" alt="login to VPS2" class="inline"/>
+<img src="https://i.gyazo.com/d540be2d24f23b56ab299877b2cef459.png"/>
 
 
 Double click the server icon to start the VNC connection
@@ -86,11 +86,32 @@ Password: (paste or type password)
 When you paste it will not display, so don't try to paste again.
 Just paste once and press Enter.
 
+## Install Putty
+
+If copy paste doesn't work for you, you might have to install putty.
+
+You can find the latest version of Putty here:
+https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+After you downloaded and installed Putty, go back to your VNC viewer and type:
+
+```
+sudo apt-get install ssh
+```
+
+After install ssh on your vps, move back to Putty.
+<img scr="https://i.gyazo.com/73d1a4795c5b6af3c896708135ad5b7a.png"/>
+
+Enter the IP address in the Host Name field, and enter the server name you wish to use for this VPS (e.g., VPS01) to Saved Sessions. Click save.
+
+Click the open button. When the console has opened, click Yes in the PuTTY Security Alert box. 
+<img src="https://github.com/projecthelixcoin/vps/raw/master/docs/images/masternode_vps/PuTTY-Security-Alert.png"/>
+
 ## Install Masternode
 
 Login to your newly installed node as "root".
 
-<img src="docs/images/masternode_vps/first-ssh-session.png" alt="VPS sizing" class="inline"/>
+<img src="docs/images/masternode_vps/first-ssh-session.png" class="inline"/>
 
 Install this dependency:
 ```
@@ -147,11 +168,11 @@ Once the wallet is open on your local computer, generate a new receive address a
 
 Click the Request payment button, and copy the address.
 
-<img src="https://i.gyazo.com/4b2f8ff12e54fa57026d3eecad02aeb3.png" alt="making new address" class="inline"/>
+<img src="https://i.gyazo.com/4b2f8ff12e54fa57026d3eecad02aeb3.png" class="inline"/>
 
 Now go to the Send tab, paste the copied address, and send *exactly* 10,000 HLIX to it in a single transaction. Wait for it to confirm on the blockchain. This is the collateral transaction that will be locked and paired with your new masternode. If you are setting up more than one masternode at one time, repeat this process for each one.
 
-<img src="https://i.gyazo.com/03d8a2076a1081f51ded60db9f46bb1e.png" alt="sending 10k HLIX" class="inline"/>
+<img src="https://i.gyazo.com/03d8a2076a1081f51ded60db9f46bb1e.png" class="inline"/>
 
 ### Step 2 - Generate Masternode Private Key
 Go to the **[Tools > Debug Console]** and enter these commands below:
@@ -175,7 +196,7 @@ This will give you the rest of the information you need to configure your master
 masternode outputs
 ```
 
-<img src="docs/images/masternode_vps/step3-masternodeoutputs.png" alt="getting transaction id" class="inline"/>
+<img src="docs/images/masternode_vps/step3-masternodeoutputs.png" class="inline"/>
 
 The long string of characters is the *Transaction ID* for your masternode collateral transaction. The number after the long string is the *Index*. Copy and paste these into the text file next to the private key you generated in Step 2.
 
@@ -184,7 +205,7 @@ If you have multiple masternodes in the same wallet and have done the 10,000 HLI
 ## End of installations
 When the script finishes, it will look similar to this:
 
-<img src="docs/images/masternode_vps/end-of-installation.png" alt="installation ended" class="inline"/>
+<img src="docs/images/masternode_vps/end-of-installation.png" class="inline"/>
 
 You only have a few steps remaining to complete your masternode configuration.
 ## Configure masternode configuration files
@@ -202,7 +223,7 @@ What you need to change is only masternode private key.
 (We recommend using IPv6 which is the default, but if you choose IPv4 when you ran the installation script, please edit #NEW_IPv4_ADDRESS_FOR_MASTERNODE_NUMBER to your VPS IP address).
 After typing the nano command, you will see something similar to this.
 
-<img src="docs/images/masternode_vps/insert-your-masternode-private-key.png" alt="add private key" class="inline"/>
+<img src="docs/images/masternode_vps/insert-your-masternode-private-key.png" class="inline"/>
 
 Copy the masternode private key from the text file you saved it in, and replace HERE_GOES_YOUR_MASTERNODE_KEY_FOR_MASTERNODE_helix_1 with that private key (this typically begins with an 8).
 
@@ -242,7 +263,7 @@ helix-MN-1 [2001:19f0:5001:ca6:2085::1]:11771 88xrxxxxxxxxxxxxxxxxxxxxxxx7K 6b4c
 
 The image below shows another example using an IPv4 IP address. If you followed this guide you are probably using an IPv6 address that looks like the line above.
 
-<img src="docs/images/masternode_vps/masternode-conf.png" alt="editing masternode.conf" class="inline"/>
+<img src="docs/images/masternode_vps/masternode-conf.png" class="inline"/>
 
 If you are running multiple masternodes, you need to add one of these lines for each masternode, and make sure the private key on each line matches the corresponding private key you entered in the VPS helix configuration file for that masternode.
 ## Check syncing status of masternode
@@ -290,7 +311,7 @@ The output will look like this:
 
 We're looking at the *blocks*, and need that to be the latest block in the blockchain. You can check your local wallet to see the latest block by hovering over the green check mark.
 
-<img src="docs/images/masternode_vps/check-blocks-number.png" alt="checking syncing status" class="inline"/>
+<img src="docs/images/masternode_vps/check-blocks-number.png" class="inline"/>
 
 Once your masternode has synced up to the latest block, go to next step. The syncing process may take 15-30 minutes or more as the helix blockchain grows. You can keep checking progress with the command above, by pressing the up arrow and Enter to repeat it.
 
@@ -315,13 +336,13 @@ If everything was setup correctly, after entering the command you will see somet
 }
 ```
 If you are setting up multiple masternodes, repeat this for each one. You can now close the debug console, return the Masternodes tab and check the status:
-<img src="https://i.gyazo.com/8990e1df088dac75ebbb9dd7b9092cf1.png" alt="checking syncing status" class="inline"/>
+<img src="https://i.gyazo.com/8990e1df088dac75ebbb9dd7b9092cf1.png" class="inline"/>
 
 It should say ENABLED, and within an hour, the timer in the Active column should start increasing.
 
 Your helix masternode is now set up and running! Depending on how many masternodes there are, it may take 12-24 hours before you see your first masternode reward--this is normal and rewards should come at more regular intervals after the first one.
 
-<img src="https://i.gyazo.com/41c16f834411757cbc7d651fd41e1817.png" alt="rewards" class="inline"/>
+<img src="https://i.gyazo.com/41c16f834411757cbc7d651fd41e1817.png" class="inline"/>
 
 ## Issues and Questions
 Please open a GitHub Issue if there are problems with this installation method. Many helix team members actively support people installing masternodes and can provide assistance in the helix Discord channel.
