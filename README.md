@@ -136,15 +136,22 @@ This prepares the system and installs the helix Masternode daemon. This includes
 ### More complex situations (ignore if you are installing a single masternode on a new VPS)
 
 If you wish to install more than one masternode on the same VPS, you can add a -c parameter to tell the script how many to configure, so for example this would install three helix masternodes (all entered on one line):
-
+(this 1st one only has to be done 1 time ever on the vps)
 ```
-git clone https://github.com/ProjectHelixCoin/vps.git && cd vps && ./install.sh -p helix -c 3
+git clone https://github.com/ProjectHelixCoin/vps.git 
+```
+```
+cd ~/vps && ./install.sh -p helix -c 3
 ```
 
 If you already have your masternode private keys, you can add them as shown below (all entered on one line):
 
+(this 1st one only has to be done 1 time ever on the vps)
 ```
-git clone https://github.com/ProjectHelixCoin/vps.git && cd vps && ./install.sh -p helix -c 3 --key **PRIVATE KEY 01** --key2 **PRIVATE KEY 02** --key3 **PRIVATE KEY 03**
+git clone https://github.com/ProjectHelixCoin/vps.git
+```
+```
+cd ~/vps && ./install.sh -p helix -c 3 --key **PRIVATE KEY 01** --key2 **PRIVATE KEY 02** --key3 **PRIVATE KEY 03**
 ```
 Using this command, you can skip the step for "Configure masternode configuration files", because the command above adds the masternode private keys to the masternode configuration files.
 
