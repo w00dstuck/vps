@@ -113,21 +113,28 @@ Login to your newly installed node as "root".
 
 <img src="docs/images/masternode_vps/first-ssh-session.png" class="inline"/>
 
-Install this dependency:
+Install these dependency:
 ```
-sudo apt-get install jp2a
+sudo apt-get install jp2a git
 ```
 
 Enter this command to copy the Masternode installation script and install a single helix Masternode:
 
+(the git clone only has to be done 1 time ever on the vps)
 ```
-git clone https://github.com/ProjectHelixCoin/vps.git && cd vps && ./install.sh -p helix
+git clone https://github.com/ProjectHelixCoin/vps.git 
+```
+```
+cd ~/vps && ./install.sh -p helix
 ```
 
 If you have your masternode private key, please use this (you can generate masternode private key with Step 2 below).
 
+(the git clone only has to be done 1 time ever on the vps)
 ```
-git clone https://github.com/ProjectHelixCoin/vps.git && cd vps && ./install.sh -p helix -k **PRIVATE KEY**
+git clone https://github.com/ProjectHelixCoin/vps.git 
+```
+cd ~/vps && ./install.sh -p helix -k **PRIVATE KEY**
 ```
 Using this command, you can skip "Configure masternode configuration files" below, because the command above adds the masternode private key to the masternode configuration files.
 
@@ -136,7 +143,8 @@ This prepares the system and installs the helix Masternode daemon. This includes
 ### More complex situations (ignore if you are installing a single masternode on a new VPS)
 
 If you wish to install more than one masternode on the same VPS, you can add a -c parameter to tell the script how many to configure, so for example this would install three helix masternodes (all entered on one line):
-(this 1st one only has to be done 1 time ever on the vps)
+
+(the git clone only has to be done 1 time ever on the vps)
 ```
 git clone https://github.com/ProjectHelixCoin/vps.git 
 ```
@@ -146,7 +154,7 @@ cd ~/vps && ./install.sh -p helix -c 3
 
 If you already have your masternode private keys, you can add them as shown below (all entered on one line):
 
-(this 1st one only has to be done 1 time ever on the vps)
+(the git clone only has to be done 1 time ever on the vps)
 ```
 git clone https://github.com/ProjectHelixCoin/vps.git
 ```
@@ -161,8 +169,12 @@ If you are upgrading your masternode(s) to a new release, you should first remov
 ```
 rm -rf /root/
 ```
+(the git clone only has to be done 1 time ever on the vps)
 ```
-git clone https://github.com/ProjectHelixCoin/vps.git && cd vps && ./install.sh -p helix -u
+git clone https://github.com/ProjectHelixCoin/vps.git 
+```
+```
+cd vps && ./install.sh -p helix -u
 ```
 
 The project is configured to use the latest official release of the helix masternode code, and we will update this project each time a new release is issued, but without downloading the latest version of this project and using the -u parameter, the script will not update an existing helix node that is already installed.
