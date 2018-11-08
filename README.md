@@ -134,6 +134,7 @@ If you have your masternode private key, please use this (you can generate maste
 ```
 git clone https://github.com/ProjectHelixCoin/vps.git 
 ```
+```
 cd ~/vps && ./install.sh -p helix -k **PRIVATE KEY**
 ```
 Using this command, you can skip "Configure masternode configuration files" below, because the command above adds the masternode private key to the masternode configuration files.
