@@ -113,6 +113,12 @@ Login to your newly installed node as "root".
 
 <img src="docs/images/masternode_vps/first-ssh-session.png" class="inline"/>
 
+Update your vps:
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+
 Install these dependency:
 ```
 sudo apt-get install jp2a git
