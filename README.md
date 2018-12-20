@@ -376,4 +376,4 @@ Here is a Discord invitation:
 
 https://discord.gg/dVgcEka
 
-If you would like to make a donation to helix's ongoing development, you can send helix to the core team at this address: PDjGJMDzvJnvbxxgR1bgPm77fFLxn3KAg8
+If you would like to make a donation to helix's ongoing development, you can send helix to the core team at this address: HDw5WYmcSePwTxRZcDfzWmZnG3KNdtktgB
