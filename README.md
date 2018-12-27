@@ -265,7 +265,7 @@ A script for starting all masternodes on the VPS has been created at /usr/local/
 Run this command after your masternode configuration written above.
 
 ```
-/usr/local/bin/activate_masternodes_helix
+sudo /usr/local/bin/activate_masternodes_helix
 ```
 
 The masternode daemons will start and begin loading the helix blockchain.
