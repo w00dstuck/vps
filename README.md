@@ -181,7 +181,7 @@ rm -rf /root/
 git clone https://github.com/ProjectHelixCoin/vps.git 
 ```
 ```
-cd vps && ./install.sh -p helix -u
+cd ~/vps && ./install.sh -p helix -u
 ```
 
 The project is configured to use the latest official release of the helix masternode code, and we will update this project each time a new release is issued, but without downloading the latest version of this project and using the -u parameter, the script will not update an existing helix node that is already installed.
