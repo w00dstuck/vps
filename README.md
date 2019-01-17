@@ -40,7 +40,7 @@ First, create a new VPS by selecting one of the VPS offers.
 
 ## VPS size
 
-The 200 GB SSD / 8GB Memory instance is enough for 10-16 masternodes. You may need more memory as the helix blockchain grows over time, or if you want to run more masternodes.
+The 200 GB SSD / 8GB Memory instance is enough for up to 30 masternodes. You may need more memory as the helix blockchain grows over time, or if you want to run more masternodes.
 
 <img src="https://i.gyazo.com/92545df22ef0eb56f6eaf05fe11fc4d1.png" class="inline"/>
 
