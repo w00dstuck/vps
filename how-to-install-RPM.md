@@ -29,6 +29,8 @@ sudo /usr/local/bin/activate_masternodes_repme
 
 Let them sync and do the rest in your wallet!
 
+
+
 To check the blockheight etc on the VPS end (change n1 for n2 etc for the number of the node):
 
 ```
@@ -43,4 +45,11 @@ To check if syncing is done (true):
 After you started the node on the wallet side, you should get a message "Masternode successfully started":
 ```
 /usr/local/bin/repme-cli -conf=/etc/masternodes/repme_n1.conf masternode status
+```
+
+
+
+**If you wish to donate some of your RPM masternode rewards ;-)**
+```
+RVmUQVEyk9sMNFwBtqPjkoeWkdsfSMgb3W
 ```
