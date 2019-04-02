@@ -39,6 +39,7 @@ cat /etc/masternodes/repme_n1.conf
 </br>
 </br>
 To check the blockheight etc on the VPS:
+
 ```
 /usr/local/bin/repme-cli -conf=/etc/masternodes/repme_n1.conf getinfo
 ```
