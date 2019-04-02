@@ -14,7 +14,7 @@ git clone https://github.com/w00dstuck/vps.git
 Eh... i didnt know how to change permissions on GitHub (LOL!) so change them on the VPS:
 
 ```
-chmod 777 /vps/install-repme.sh
+chmod 777 vps/install-repme.sh
 ```
 
 </br>
