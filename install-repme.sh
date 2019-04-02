@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 cd ~
 cd /usr/local/bin
