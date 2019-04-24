@@ -1,7 +1,7 @@
 
 **Quick guide to install Multiple EPIC Masternodes on a Ubuntu 16.04 VPS**
 
-I'm running my VPS at Contabo (good specs for good pricing), I have also tested this on a Vultr VPS and it seemed to work. If you install mutliple nodes on a VPS you have to enable ipv6. In this guide i am assuming you know how to connect to a VPS and update it etc and know how to get things done on your wallet side, else you could look that up here: https://github.com/w00dstuck/vps
+I'm running my VPS at Contabo (good specs for good pricing), I have also tested this on a Vultr VPS and it seemed to work. If you install mutliple nodes on a VPS you have to enable ipv6 (with contabo vps its not enabled by default i think. it is "enable_ipv6" then "reboot"). In this guide i am assuming you know how to connect to a VPS and update it etc and know how to get things done on your wallet side, else you could look that up here: https://github.com/w00dstuck/vps
 </br>
 </br>
 Clone the GitHub repo:
