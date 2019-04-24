@@ -33,13 +33,22 @@ Below command shows it for 2 nodes, change this (-c 2) in the amount you want an
 cd ~/vps && ./install.sh -p epic -c 2 --key **GENKEY1** --key2 **GENKEY2**
 ```
 
-When the script is done, you activate the nodes (script tells you to do so too):
+When the script is done, we need to reinstall 2 of the dependencies (the Nodemaster script autoremoves them):
+```
+sudo apt-get install libdb4.8
+```
+```
+sudo apt-get install libdb4.8++
+```
+
+When tis is done, you activate the nodes (script tells you to do so too):
 
 ```
 sudo /usr/local/bin/activate_masternodes_epic
 ```
 
-</br 10k EPIC to that adress and use the tx id for the MN config string. You can check the config files on the VPS for the IP-address and masternode key (change n1 for n2 etc for the number of the node):
+</br>
+Now we need to let them fully sync and do the rest on your wallet side! Create an address for your node, send exactly 10k EPIC to that adress and use the tx id for the MN config string. You can check the config files on the VPS for the IP-address and masternode key (change n1 for n2 etc for the number of the node):
 
 ```
 cat /etc/masternodes/epic_n1.conf
