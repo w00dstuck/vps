@@ -1,7 +1,5 @@
 #!/bin/bash
 
-CONFIG_FILE='xbi.conf'
-CONFIGFOLDER='/root/.XBI'
 COIN_DAEMON='xbid'
 COIN_CLI='xbi-cli'
 COIN_PATH='/usr/local/bin/'
@@ -85,26 +83,6 @@ function restart_service() {
   fi
 }
 
-function important_information() {
- echo
- echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${BLUE}Windows Wallet Guide. https://github.com/sub307/Bitcoin_Incognito/blob/master/README.md${NC}"
- echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${GREEN}$COIN_NAME Masternode is up and running listening on port${NC}${PURPLE}$COIN_PORT${NC}."
- echo -e "${GREEN}Configuration file is:${NC}${RED}$CONFIGFOLDER/$CONFIG_FILE${NC}"
- echo -e "${GREEN}Start:${NC}${RED}systemctl start $COIN_NAME.service${NC}"
- echo -e "${GREEN}Stop:${NC}${RED}systemctl stop $COIN_NAME.service${NC}"
- echo -e "${GREEN}VPS_IP:${NC}${GREEN}$NODEIP:$COIN_PORT${NC}"
- echo -e "${GREEN}MASTERNODE GENKEY is:${NC}${PURPLE}$COINKEY${NC}"
- echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${RED}Ensure Node is fully SYNCED with BLOCKCHAIN before starting your Node :).${NC}"
- echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${GREEN}Usage Commands.${NC}"
- echo -e "${GREEN}xbi-cli masternode status${NC}"
- echo -e "${GREEN}xbi-cli getinfo.${NC}"
- echo -e "${BLUE}================================================================================================================================${NC}"
-}
-
 ##### Main #####
 clear
 
@@ -112,4 +90,3 @@ purgeOldInstallation
 download_node
 add_bootstrap
 restart_service
-important_information
