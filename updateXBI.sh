@@ -20,7 +20,7 @@ NC='\033[0m'
 MAG='\e[1;35m'
 
 function purgeOldInstallation() {
-    echo -e "${GREEN}Preparing the VPS to setup to install $COIN_NAME masternode${NC}"
+    echo -e "${GREEN}Preparing the VPS to setup to update $COIN_NAME masternode${NC}"
     echo -e "${GREEN}* Searching and removing old $COIN_NAME files and configurations${NC}"
 #kill wallet daemon
     systemctl stop $COIN_NAME.service > /dev/null 2>&1
